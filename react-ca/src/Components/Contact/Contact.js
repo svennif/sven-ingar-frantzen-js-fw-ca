@@ -28,24 +28,17 @@ function Contact() {
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(Schema),
   });
-  const onSubmit = (data) =>
-    alert(
-      data.FirstName +
-        " " +
-        data.LastName +
-        " " +
-        data.Email +
-        " " +
-        data.Message
-    );
+
+  const onSubmit = () => document.querySelector(".success").append("Success");
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
+      <p className="success" style={{ color: "Green" }}></p>
       <Form.Group>
         <Form.Label>First Name</Form.Label>
         <Form.Control
           name="FirstName"
           placeholder="First name..."
-          ref={register}
+          ref={register({ required: true, minLength: 2 })}
         />
         <p>
           <b>

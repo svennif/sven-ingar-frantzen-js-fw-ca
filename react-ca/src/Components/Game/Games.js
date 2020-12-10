@@ -16,7 +16,7 @@ function Games({ name, background_image, rating, id, released }) {
         <Card.Text>
           <b>Release Date:</b> {released}
         </Card.Text>
-        <Link to={"game/" + {id}}>
+        <Link to={"game/" + id}>
           <Button variant="secondary" block>
             View
           </Button>
