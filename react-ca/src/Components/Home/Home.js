@@ -38,6 +38,7 @@ function Home() {
   if (loading) {
     return <Spinner animation="border" className="spnner" />;
   }
+
   return (
     <>
       <div>
@@ -46,6 +47,7 @@ function Home() {
           ({ id, name, background_image, rating, released }) => (
             <Games
               key={id}
+              id={id}
               name={name}
               background_image={background_image}
               rating={rating}

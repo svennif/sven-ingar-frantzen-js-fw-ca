@@ -5,7 +5,7 @@ import FormControl from "react-bootstrap/FormControl";
 
 function GameSearch({ handleSearch }) {
   return (
-    <InputGroup className="search m-2">
+    <InputGroup className="search vw-50 m-2">
       <FormControl
         placeholder="Search for a game"
         onChange={(e) => handleSearch(e)}

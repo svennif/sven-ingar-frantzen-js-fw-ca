@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BASE_URL } from "../Api";
 
-function GameDetails() {
-  const [game, setGame] = useState([]);
+function GameDetails({ match }) {
+  let [details, setDetails] = useState({});
 
   useEffect(() => {
-    fetch(BASE_URL)
+    fetch(BASE_URL + `/${match.params.id}`)
       .then((response) => response.json())
-      .then((json) => setGame(json.results))
+      .then((json) => setDetails(json))
       .catch((error) => console.log(error));
-  });
-  console.log(setGame);
+  }, [match.params.id]);
 
   return (
     <>
-      <p>{game.id}</p>
+      <h1>{details.name}</h1>
+      <img src={details.background_image} alt={details.name} />
+      <p>{details.description}</p>
+      <a href={details.website}>Go to the website</a>
     </>
   );
 }
