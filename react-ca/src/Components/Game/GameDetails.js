@@ -10,6 +10,8 @@ function GameDetails() {
       .then((json) => setGame(json.results))
       .catch((error) => console.log(error));
   });
+  console.log(setGame);
+
   return (
     <>
       <p>{game.id}</p>
