@@ -4,6 +4,7 @@ import Contact from "./Components/Contact/Contact";
 import Game from "./Components/Game/Games";
 import Home from "./Components/Home/Home";
 import GameDetails from "./Components/Game/GameDetails";
+import "./Components/scss/style.scss";
 
 function App() {
   return (

@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar expand="lg">
         <NavLink to="/" exact>
           <Navbar.Brand>The Game Page</Navbar.Brand>
         </NavLink>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL } from "../Api";
+import Container from "react-bootstrap/Container";
 import Spinner from "react-bootstrap/Spinner";
 import GameSearch from "../Game/GameSearch";
 import Games from "../Game/Games";
@@ -41,7 +42,7 @@ function Home() {
 
   return (
     <>
-      <div>
+      <Container>
         <GameSearch handleSearch={filterGames} />
         {filteredGames.map(
           ({ id, name, background_image, rating, released }) => (
@@ -55,7 +56,7 @@ function Home() {
             />
           )
         )}
-      </div>
+      </Container>
     </>
   );
 }
