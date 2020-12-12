@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL } from "../Api";
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
 
 function GameDetails({ match }) {
   let [details, setDetails] = useState({});
@@ -13,12 +15,30 @@ function GameDetails({ match }) {
 
   return (
     <>
-      <h1>{details.name}</h1>
-      <img src={details.background_image} alt={details.name} />
-      <p>{details.description}</p>
-      <a href={details.website}>Go to the website</a>
+      <Container>
+        <h1 id="GameDetailTitle">{details.name}</h1>
+        <Image
+          fluid
+          className="GameDetailImage"
+          src={details.background_image}
+          alt={details.name}
+        />
+        <p>{details.description}</p>
+        <a href={details.website}>Go to the website</a>
+      </Container>
     </>
   );
 }
 
 export default GameDetails;
+
+/**
+ * <h1>{details.name}</h1>
+            <img
+              className="GameDetailImage"
+              src={details.background_image}
+              alt={details.name}
+            />
+            <p>{details.description}</p>
+            <a href={details.website}>Go to the website</a>
+ */

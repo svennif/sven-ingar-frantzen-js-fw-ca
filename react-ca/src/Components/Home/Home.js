@@ -37,7 +37,13 @@ function Home() {
   };
 
   if (loading) {
-    return <Spinner animation="border" className="spnner" />;
+    return (
+      <Container id="SpinnerContainer">
+        <Spinner animation="border" id="Spinner">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
+      </Container>
+    );
   }
 
   return (

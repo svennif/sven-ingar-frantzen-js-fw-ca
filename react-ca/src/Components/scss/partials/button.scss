@@ -1,6 +1,10 @@
-@import "./base.scss";
+@import "./Base.scss";
 
 .btn {
-    background-color: $main-colour;
-    border: none;
+  background-color: $main-colour;
+  border: none;
+}
+
+.card-body a {
+  text-decoration: none;
 }

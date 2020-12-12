@@ -1,1 +1,11 @@
 $main-colour: rgb(51, 48, 48);
+
+#Spinner {
+  color: $main-colour;
+}
+
+#SpinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

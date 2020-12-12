@@ -1,8 +1,11 @@
+@import "./Base.scss";
+
 .navbar {
-    background-color: $main-colour;
+  background-color: $main-colour;
 }
 
-.navbar-brand,
-.navbar-link {
-    color: rgb(255, 0, 0);
+#Brand,
+#home,
+#contact {
+  color: white;
 }
