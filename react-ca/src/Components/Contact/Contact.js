@@ -30,7 +30,7 @@ function Contact() {
     resolver: yupResolver(Schema),
   });
 
-  const onSubmit = () => document.querySelector(".success").append("Success");
+  const onSubmit = () => document.querySelector(".success").append("Success! Your message has been sent!");
   return (
     <Container>
       <Form onSubmit={handleSubmit(onSubmit)}>

@@ -23,7 +23,7 @@ function GameDetails({ match }) {
           src={details.background_image}
           alt={details.name}
         />
-        <p>{details.description}</p>
+        <p>{details.description_raw}</p>
         <a href={details.website}>Go to the website</a>
       </Container>
     </>
